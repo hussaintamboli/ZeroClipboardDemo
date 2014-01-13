@@ -1,0 +1,29 @@
+<html>
+<body>
+        <script type="text/javascript" src="jquery-1.4.min.js"></script>
+        <script type="text/javascript" src="ZeroClipboard.js"></script>
+
+        <div id="d_clip_button_div" style="border:1px solid black; padding:20px;">
+		<input type="button" id="copy-button" value="Copy to Clipboard" style="margin-top:-10px;"/>
+		<br/>
+		<textarea name="copy-content" id="copy-content" rows="3" cols="30">copy this text!</textarea>
+		<textarea name="paste-content" id="paste-content" rows="3" cols="30" onclick="console.log('clearing contents of paste text area');$(this).val('');">paste it here!
+		</textarea>
+
+	</div>
+
+        <script language="JavaScript">
+		var clip = new ZeroClipboard( document.getElementById("copy-button"), {
+			moviePath: "ZeroClipboard.swf"
+		} );
+		clip.on('mousedown',function() {
+			clip.setText(document.getElementById('copy-content').value);
+			console.log("copying...");
+		});
+		clip.on('complete',function(client,args) {
+			console.log('copied: ' + args.text);
+		});
+	
+        </script>
+</body>
+</html>
