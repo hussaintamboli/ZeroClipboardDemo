@@ -1,0 +1,11 @@
+<VirtualHost *:8090>
+    DocumentRoot /home/hussain/Documents/MyRepos/ZeroClipboard
+    DirectoryIndex index.html
+    
+    <Directory /home/hussain/Documents/MyRepos/ZeroClipboard>
+        AllowOverride None
+	Order allow, deny
+	allow from all
+    </Directory>
+
+</VirtualHost>
