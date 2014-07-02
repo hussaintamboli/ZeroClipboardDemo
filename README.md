@@ -2,9 +2,9 @@ A repo that demonstrates **copy to clipboard** using Zeroclipboard - https://git
 
 Instructions
 ------------
-
- 1. Set this directory (repo) as a document root for your localhost. You will have to modify your webserver's config for that.
- 2. Open http://localhost
+$ cd ZeroClipboardDemo
+$ python -m SimpleHTTPServer
+(Open http://localhost:8000 in your browser)
 
 You should be able to test **copy to clipboard** functionality.
 
